@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStudy</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+}
+ 
+body {
+  font-family: Arial;
+  /* padding: 10px; */
+  /* background: #f1f1f1; */
+}
+
+    /* 顶部导航部分 */
+
+    .header
+    {
+        text-align: center;
+        height:50px;
+        background-color: #f1f1f1;
+    }
+    span.one {
+        float: left;
+        line-height: 50px;
+        margin-left: 20px;
+        font-family: 微软雅黑,sans-serif;
+        font-size: 20px;
+    }  
+      span.two {
+        float: left;  
+        line-height: 50px;
+        margin-left: 20px;
+        font-size: 20px;
+        font-family: 微软雅黑,sans-serif;
+    }   
+     span.three{
+        float: left;
+        line-height: 50px;
+        margin-left: 20px;
+        font-size: 20px;
+        font-family: 微软雅黑,sans-serif;
+    }   
+     span.four{
+        float: left;
+        line-height: 50px;
+        margin-left: 20px;
+        font-size: 20px; 
+        font-family: 微软雅黑,sans-serif; 
+
+    }
+
+ 
+
+    .index {
+        float: left;
+        margin-left: 100px;
+        margin-top:5px;
+        width: 250px;
+        line-height: 30px;
+
+        background-color: blue;
+        border: 1px solid blue;
+    }
+    .header span input {
+        float: left;
+            margin-left: 0px;
+            width: 200px;
+            height: 30px;
+            color: #999;
+   
+    }
+    div.text {
+        
+        display: inline-block;
+        padding: 0 5px;
+        line-height: 30px;
+        height: 30px;
+    }
+
+    /* 导航链接部分 */
+
+    div.middle {
+        
+        margin: 10px;
+        margin-bottom: 0;
+    }
+    div.middle div {
+       
+        padding: 20px;
+        background-color: #aaa;
+
+        height: 200px;
+
+    }
+    div.middle div p {
+        text-align: center;
+        font-size: 40px;
+    }
+    .link {
+        background-color: black;
+        margin-top:0;
+        margin: 0 10px;
+       padding: 0;
+    }
+    .link p  {
+        display: inline-block;
+        font-size: 40px;
+    }
+    .link p a  {
+        float: left;
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+
+        text-decoration: none;
+        color: white;
+    }
+    .link p a:hover {
+        background-color:#999;
+        color: black;
+    }
+    .lefter {
+        float: left;       
+        width: 75%;
+    }
+    .righter {
+        float: left  ;      
+        width: 25%;
+    }
+    .lefter .rebig {
+        margin: 10px;
+        text-align: left;
+        background-color: #66ccff;
+    }
+    .righter .rebig {
+        margin: 10px;
+        text-align: left;
+        background-color: #66ccff;
+    }
+    .lefter .rebig .reless {
+        margin:10px;
+    }
+    .righter .rebig .reless {
+        margin:10px;
+    }
+    .lefter .rebig .reless .picture {
+        background-color: #6f6f6f;
+        font-size: 30px;
+        height: 200px;
+    }
+    .righter .rebig .reless .picture {
+        background-color: #6f6f6f;
+        font-size: 30px;
+        height: 200px;
+    }
+    .lefter .rebig .reless h2 {
+        padding: 20px 20px 20px 0;
+    }
+     .righter .rebig .reless h2 {
+        padding: 20px 20px 20px 0;
+    }
+    /* 列后面清除浮动 */
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    /* 底部 */
+    .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+    }
+    /* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+    @media screen and (max-width: 800px) {
+    .lefter, .righter {   
+        width: 100%;
+        padding: 0;
+    }
+    }
+    
+    /* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+    @media screen and (max-width: 400px) {
+    .link a {
+        float: none;
+        width: 100%;
+    }
+    }
+
+</style>
+<body>
+    <!-- 顶部 -->
+    <div class="header">
+        <span class="one">首页</span>
+        <span class="two">学习路径</span>
+        <span class="three">文章</span>
+        <span class="four">讨论区</span>
+        <span class="index">
+            <input type="text" value="你搜索试试">
+            <div class="text"> 搜索</div>
+        </span>
+    </div>
+    <!-- 中部图片部分 -->
+    <div class="middle">
+        <div>
+            <p style="display: block;">图片</p>
+            <p style="display:none;">没想好放什么图片</p>
+            <p style="display:none;">但这个可以是一个轮播图</p>
+        </div>
+    </div>
+    <!-- 链接部分 -->
+    <div class="link">
+        <p><a href="#"> 链接</a></p>
+        <p><a href="#"> 链接</a></p>
+        <p><a href="#"> 链接</a></p>
+    </div>
+    <div class="row">
+        <div class=" column lefter">
+            <div class="rebig">
+                <div class="reless">
+                    <h2>文章</h2>
+                    <h4>2022/7/29</h4>
+                    <div class="picture">
+                        <p>图片</p>
+                    </div>
+                    <p>一些文本</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="column righter">
+            <div class="rebig">
+                <div class="reless">
+                    <h2>关于我</h2>
+                    <div class="picture">
+                        <p>
+                            内容
+                        </p>
+                    </div>
+                    <p>一些文本</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>底部</p>
+    </div>
+<script>
+    let input = document.querySelector('span input')
+   
+    input.onfocus = function() {
+        console.log('得到了')
+        if(this.value != "") {
+            this.value = ""
+        }
+    }
+    input.onblur = function () {
+        console.log('失去了')
+        if(this.value === "") {
+            this.value = "你不会以为我真的会做搜索功能吧"
+        }
+    }
+    let link = document.querySelectorAll('.link p a')
+    let src = document.querySelectorAll('.middle div p ')
+    for(let i = 0;i<link.length;i++) {
+        link[i].onfocus = function() {
+            for(let j = 0;j<src.length;j++) {
+                src[j].style.display = 'none'
+                
+            }
+            src[i].style.display = 'block'
+
+        }
+    }
+</script>
+</body>
+</html>
